@@ -11,8 +11,8 @@ public class StudentList {
 			System.out.println("Loading data ...");
 			try {
 
-				String r = readFile.readLine();
-				String i[] = r.split(",");
+				String readLine = readFile.readLine();
+				String i[] = readLine.split(",");
 				for(String j : i) { System.out.println(j); }
 			} catch (Exception e){}
 			System.out.println("Data Loaded."); // data load
@@ -23,8 +23,8 @@ public class StudentList {
 			System.out.println("Loading data ...");
 			try {
 
-				String r = readFile.readLine();
-				String i[] = r.split(",");
+				String readLine = readFile.readLine();
+				String i[] = readLine.split(",");
 				Random x = new Random();
 				int y = x.nextInt(4); // generate new random numbers
 				System.out.println(i[y]);
@@ -56,8 +56,8 @@ public class StudentList {
 				BufferedReader s = new BufferedReader(
 						new InputStreamReader(
 								new FileInputStream("students.txt"))); // file read
-				String r = s.readLine();
-				String i[] = r.split(",");
+				String readLine = s.readLine();
+				String i[] = readLine.split(",");
 				boolean done = false;
 				String t = args[0].substring(1);
 				for(int idx = 0; idx<i.length && !done; idx++) {
@@ -88,6 +88,9 @@ public class StudentList {
 				System.out.println(count +" word(s) found " + a.length); // output
 			} catch (Exception e){}
 			System.out.println("Data Loaded.");
+		}
+		else{
+			System.out.println("wrong output");
 		}
 	}
 }
